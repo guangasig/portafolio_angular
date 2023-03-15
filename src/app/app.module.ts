@@ -16,7 +16,7 @@ import { FooterComponent } from './layout/footer/footer.component';
   declarations: [
     AppComponent,
     MasterComponent,
-    HeaderComponent,
+    HeaderComponent, 
     FooterComponent,
   ],
   imports: [

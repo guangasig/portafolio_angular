@@ -3,10 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
+    "start:dev": "ng serve --configuration=development",
+    "start:prod": "ng serve --configuration=production",
+    "build:dev": "ng build --configuration=development",
+    "build:prod": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "backend": "json-server --watch ./src/app/data/backend/db.json --port 3000"
   },
   "private": true,
   "dependencies": {
