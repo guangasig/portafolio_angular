@@ -17,7 +17,7 @@ import { FooterComponent } from './layout/footer/footer.component';
     AppComponent,
     MasterComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     CoreModule,

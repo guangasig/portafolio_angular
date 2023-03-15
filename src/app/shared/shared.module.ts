@@ -6,7 +6,7 @@ import * as fromComponents from './components';
 
 @NgModule({
   declarations: [
-    ...fromComponents.components
+    ...fromComponents.components,
   ],
   imports: [
     CommonModule,

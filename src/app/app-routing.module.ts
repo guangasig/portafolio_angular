@@ -6,6 +6,12 @@ const routes: Routes = [
   {
     path: '',
     component: MasterComponent,
+    children: [
+      {
+        path: 'aunth',
+        loadChildren: () => import('@modules/aunth/aunth.module').then((m) => m.AunthModule),
+      }
+    ]
   }
 ];
 

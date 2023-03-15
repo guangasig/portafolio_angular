@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;" *ngIf="data">
+    <img [src]="data.avatar" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{ data.name }}</h5>
+        <p class="card-text">
+            {{ data.bio }}
+        </p>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Email: {{ data.email }}</li>
+        <li class="list-group-item">Teléfono: {{ data.phone }}</li>
+    </ul>
+    <div class="card-body">
+        <a href="#" class="card-link">Editar</a>
+        <a href="#" class="card-link">Eliminar</a>
+    </div>
+</div>
