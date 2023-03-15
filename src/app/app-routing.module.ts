@@ -5,6 +5,11 @@ import { MasterComponent } from './layout/master/master.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/panel/aunth',
+    pathMatch: 'full'
+  },
+  {
+    path: 'panel',
     component: MasterComponent,
     children: [
       {
@@ -19,4 +24,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes, { useHash: true})],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

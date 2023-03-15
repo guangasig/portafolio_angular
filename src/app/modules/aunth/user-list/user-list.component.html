@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <app-subtitle-page text="Lista de usuarios" type="primary"></app-subtitle-page>
     </div>
-    <div class="col-md-12">
-        <app-card-user [data]="user"></app-card-user>
+    <div class="row col-md-12">
+        <app-card-user class="col-md-3 me-4" [data]="user" *ngFor="let user of users"></app-card-user>
     </div>
 </div>
