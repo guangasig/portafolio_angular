@@ -16,5 +16,18 @@
             "email":"guangasigtsm@gmail.com",
             "phone":"0995819939"
         }
-    ]
+    ],
+
+    "skills":[
+		{ "weight": 16, "text": "Oracle" },
+		{ "weight": 12, "text": "Linux" },
+		{ "weight": 18, "text": "Net Core" },
+		{ "weight": 16, "text": "SQL" },
+		{ "weight": 30, "text": "MySQL" },
+		{ "weight": 30, "text": "Laravel" },
+		{ "weight": 18, "text": "PHP" },
+		{ "weight": 20, "text": "Angular" },
+		{ "weight": 16, "text": "React" },
+		{ "weight": 30, "text": "Vue" }
+	]
 }

@@ -1,0 +1,6 @@
+div.container-canvas>tag-canvas{
+    box-sizing: content-box;
+    /* background-color: aqua; */
+    width: 500px !important;
+    height: 500px !important;
+}
