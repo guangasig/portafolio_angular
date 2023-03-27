@@ -1,7 +1,7 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, ViewChild, ElementRef, Inject, OnInit } from '@angular/core';
 import { SkillsService } from '@data/services/api/skills/skills.service';
-import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Tag } from 'ng-tagcanvas';
 import { Modal } from '@shared/components/modal/modal-bootstrap/modal-bootstrap';
 
@@ -19,6 +19,8 @@ export class HomePortafolioComponent implements OnInit {
     private modalM;
     public titleModal:string = 'Modal';
     public contentModal:string = 'Description';
+    public title = 'angularTests';
+    public list = ['me gusta el desarrollo de aplicaciones web', 'y enseñar progrmación.']
 
     ngAfterViewInit() {
       let x = this.canvas;

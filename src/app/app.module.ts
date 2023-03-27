@@ -15,6 +15,7 @@ import { HeaderComponent } from './layout/header/header.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HomePortafolioComponent } from './modules/portafolio/home-portafolio/home-portafolio.component';
 import { HelloComponent } from '@modules/portafolio/home-portafolio/hello.component';
+import { AngularTypewriterEffectModule } from 'angular-typewriter-effect';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { HelloComponent } from '@modules/portafolio/home-portafolio/hello.compon
     NgbModule,
     FormsModule,
     TagCanvasModule,
+    AngularTypewriterEffectModule,
     CoreModule,
     SharedModule,
     BrowserModule,
