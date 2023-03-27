@@ -1,6 +1,9 @@
-import { Component, ViewChild, ElementRef } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, ViewChild, ElementRef, Inject, OnInit } from '@angular/core';
 import { SkillsService } from '@data/services/api/skills/skills.service';
+import { ModalDismissReasons, NgbDatepickerModule, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Tag } from 'ng-tagcanvas';
+import { Modal } from '@shared/components/modal/modal-bootstrap/modal-bootstrap';
 
 @Component({
   selector: 'app-home-portafolio',
@@ -8,77 +11,117 @@ import { Tag } from 'ng-tagcanvas';
   styleUrls: ['./home-portafolio.component.css']
 })
 
-export class HomePortafolioComponent {
+export class HomePortafolioComponent implements OnInit {
 
+    @ViewChild("modal") modal!: ElementRef;
     @ViewChild("skills") canvas!: ElementRef;
-    
+
+    private modalM;
+    public titleModal:string = 'Modal';
+    public contentModal:string = 'Description';
+
     ngAfterViewInit() {
       let x = this.canvas;
       let y = x.nativeElement;
         console.log(x, y);
     }
 
-
     getData() {
         console.log(this.canvas);
         // this.skills.nativeElement.innerHTML = "I am changed by ElementRef & ViewChild";
     }
 
-	tags: Tag[] = [];
+	  tags: Tag[] = [];
 	
-	options: TagCanvasOptions = {
-     freezeActive: false,
-	  freezeDecel: false,
-    activeCursor: 'pointer',
-    pulsateTo: 1,
-    pulsateTime: 3,
-    reverse: false,
-    depth: 0.5,
-    maxSpeed: 0.05,
-    minSpeed: 0,
-    decel: 0.95,
-    interval: 20,
-    minBrightness: 0.1,
-    maxBrightness: 1,
-    outlineColour: '#ffff99',
-    outlineThickness: 2,
-    outlineOffset: 5,
-    outlineMethod: 'outline', // 'classic', 'block', 'colour', 'size', 'none'
-  outlineRadius: 0,
-  textColour: '#ff99ff',
-  textHeight: 15,
-  textFont: 'Helvetica, Arial, sans-serif',
-  shadow: '#000',
-  shadowBlur: 0,
-  shadowOffset: [0,0],
-  initial: null,
-  hideTags: true,
-  zoom: 1,
-  weight: false,
-  weightMode: 'size', // 'colour', 'both', 'bgcolour', 'bgoutline', 'outline'
-  // weightFrom: null,
-  weightSize: 1,
-	  // weightSizeMin: null,
+    options: TagCanvasOptions = {
+      // freezeActive: false,
+      // freezeDecel: false,
+      pinchZoom:false,
+      animTiming:"Smooth",
+      shadowOffset: [0,0],
+      radiusX:1,
+      radiusY:1,
+      radiusZ:1,
+      activeCursor: 'pointer',
+      initial: [0.2,-0.2],
+      textHeight: 24,
+      // pulsateTo: 1,
+      // pulsateTime: 36,
+      // reverse: false,
+      // depth: 0.5,
+      // maxSpeed: 0.05,
+      // minSpeed: 0,
+      // decel: 0.95,
+      // interval: 20,
+      // minBrightness: 0.1,
+      // maxBrightness: 1,
+      // outlineColour: '#ffff99',
+      // outlineThickness: 2,
+      // outlineOffset: 5,
+      // outlineMethod: 'outline', // 'classic', 'block', 'colour', 'size', 'none'
+      // outlineRadius: 0,
+      // textColour: '#ff99ff',
+      // textFont: 'Helvetica, Arial, sans-serif',
+      // shadow: '#000',
+      // shadowBlur: 0,
+      // shadowOffset: [0,0],
+      // hideTags: true,
+      // weight: false,
+      // weightMode: 'size', // 'colour', 'both', 'bgcolour', 'bgoutline', 'outline'
+      // // weightFrom: null,
+      // weightSize: 1,
+      // // weightSizeMin: null,
 
-	  // weightSizeMax: null,
-  };
+      // weightSizeMax: 500,
+    };
+
+    closeResult = '';
 	
-	constructor(private skillsService:SkillsService ) {
+    constructor(private skillsService:SkillsService, private modalService: NgbModal) {
+      // console.log(this.skills);
+      this.skillsService.getSkills().subscribe(response =>{
+        if(!response.error){
+          this.tags = response.data ? response.data : [];
+        }else{
+          this.tags = [];
+        }
+      })
 
-    // console.log(this.skills);
+      this.modalM = new Modal(this.modalService);
+    }
+
+    
+    tagClicked(tag:any) {
+      console.log(tag);
+      this.titleModal = tag ? tag.text : '';
+      this.contentModal = tag ? tag.descripcion : '';
+      this.modalM.open(this.modal)
+    }
+
+    themeSelection: boolean = false;
+
+  // constructor(@Inject(DOCUMENT) private document: Document){
+  //   let theme = window.localStorage.getItem('theme');
+  //   if (theme){
+  //     this.themeSelection = theme === 'dark' ? true : false;
+  //     this.changeTheme(this.themeSelection);
+  //   }
+  // }
+
+  // changeTheme(state:any){
+  //   console.log('changeTheme', state);
+  //   let theme = state ? 'dark' : 'light';
+  //   window.localStorage.setItem('theme', theme);
+  //   let themeLink = this.document.getElementById('app-theme') as HTMLLinkElement;
+  //   let href = 'lara-'+theme+'-blue'+'.css';
+  //   console.log(href);
+  //   themeLink.href = href;
+  // }
+
+    ngOnInit(): void {
+    //   // this.themeSelection = true
+    //   this.changeTheme(true);
       
-
-		this.skillsService.getSkills().subscribe(response =>{
-      if(!response.error){
-        this.tags = response.data ? response.data : [];
-      }else{
-        this.tags = [];
-      }
-    })
-	}
-
-	tagClicked(tag:any) {
-		console.log(tag);
-	}
+    }
 
 }

@@ -4,10 +4,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import * as fromComponents from './components';
 import { RouterModule } from '@angular/router';
+import { ModalBootstrapComponent } from './components/modal/modal-bootstrap/modal-bootstrap.component';
 
 @NgModule({
   declarations: [
     ...fromComponents.components,
+    ModalBootstrapComponent,
   ],
   imports: [
     CommonModule,

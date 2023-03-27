@@ -19,15 +19,33 @@
     ],
 
     "skills":[
-		{ "weight": 16, "text": "Oracle" },
-		{ "weight": 12, "text": "Linux" },
-		{ "weight": 18, "text": "Net Core" },
-		{ "weight": 16, "text": "SQL" },
-		{ "weight": 30, "text": "MySQL" },
-		{ "weight": 30, "text": "Laravel" },
-		{ "weight": 18, "text": "PHP" },
-		{ "weight": 20, "text": "Angular" },
-		{ "weight": 16, "text": "React" },
-		{ "weight": 30, "text": "Vue" }
-	]
+		{ "id":1 ,"weight": 16, "text": "Oracle", "descripcion": "Resuelvo ejercicios en hackerrank y leetcode para comparar mi forma de abordar un problema con la de otros participantes, aprender y mejorar mi código." },
+		{ "id":2 ,"weight": 12, "text": "Linux", "descripcion": "Considero que mi conocimiento es el necesario para poder defenderme. Definitivamente tengo que prepárame más en esta área."},
+		{ "id":3 ,"weight": 18, "text": "Net Core" , "descripcion": "Desde hace unos meses atrás, vengo practicando Entity Framework Core. Además, estoy cursando el primer módulo de una capacitación de Angular con c#."},
+		{ "id":4 ,"weight": 16, "text": "SQL" , "descripcion": "Resuelvo ejercicios en hackerrank y leetcode para comparar mi forma de abordar un problema con la de otros participantes, aprender y mejorar mi código."},
+		{ "id":5 ,"weight": 30, "text": "MySQL" , "descripcion": "He fortalecido mi conocimiento en mi último trabajo; de aquí mi gusto para resolver ejercicios en hackerrank y leetcode y estar capacitándome más y más."},
+		{ "id":6 ,"weight": 30, "text": "Laravel" , "descripcion": "He fortalecido mi conocimiento en mi último trabajo; participe en varios proyectos."},
+		{ "id":7 ,"weight": 18, "text": "PHP" , "descripcion": "He fortalecido mi conocimiento en mi último trabajo; participe en varios proyectos."},
+		{ "id":8 ,"weight": 20, "text": "Angular" , "descripcion": "Estoy cursando el primer módulo de una capacitación de Angular con c#."},
+		{ "id":9 ,"weight": 16, "text": "React" , "descripcion": "Estoy aprendiendo, y construyendo mi portafolio."}
+	],
+
+    "projects":[
+        {
+            "id":1,
+            "descripcion": "Resuelvo ejercicios en hackerrank y leetcode para comparar mi forma de abordar un problema con la de otros participantes, aprender y tratar de mejor mi código."
+        },
+        {
+            "id":2,
+            "descripcion": "Considero que mi conocimiento es el necesario para poder defenderme. Definitivamente tengo que prepárame más en esta área."
+        }
+    ],
+
+    "skills_projects":[
+        {
+            "skillId":1,
+            "projectId":1,
+            "habilidad":"Oracle"
+        }
+    ]
 }

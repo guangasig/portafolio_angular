@@ -1,11 +1,33 @@
 <div class="container text-center">
-  <div class="row">
-    <div class="col">
-      1 of 2
+    <div class="row">
+        <div class="col">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" [(ngModel)]="themeSelection">
+                <label class="form-check-label" for="flexCheckDefault">
+                Default checkbox
+                </label>
+            </div>
+        </div>
+        <div class="col">
+            <div class="container-canvas">
+                <tag-canvas #skills width="900" height="500" [tags]="tags" [options]="options" (tagClick)="tagClicked($event)"></tag-canvas>
+            </div>
+        </div>
+        <div class="col">
+            <!-- <button class="btn btn-lg btn-outline-primary" (click)="open(modal)">Launch demo modal</button> -->
+        </div>
     </div>
-    <div class="col">
-		<div class="container-canvas">
-			<tag-canvas #skills width="900" height="500" [tags]="tags" [options]="options" (tagClick)="tagClicked($event)"></tag-canvas>
-		</div>
-    </div>
-  </div>
+</div>
+<!-- <app-modal-bootstrap></app-modal-bootstrap> -->
+<ng-template #modal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">{{ titleModal }}</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<p>{{ contentModal }}</p>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-light" (click)="modal.close('Close click')">Close</button>
+	</div>
+</ng-template>
