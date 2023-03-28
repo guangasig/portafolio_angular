@@ -1,0 +1,38 @@
+<!-- Barra de navegación para el portafolio -->
+<nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark navbar-color">
+    <div class="container">
+        <a class="nav-item nav-link active text-logo" [routerLink]="['portafolio']" aria-current="page">
+           <img src="assets/images/logo.gif" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" aria-controls="navbarContent"
+			[attr.aria-expanded]="!collapsed"
+			aria-label="Toggle navigation" (click)="collapsed = !collapsed">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="items-computer ml-2 navbar-items" [class.collapse]="collapsed" id="navbarContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['portafolio']" routerLinkActive="active" aria-current="page">Inicio</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['portafolio/skills']" routerLinkActive="active" aria-current="page" >Habilidades</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['portafolio/projects']" routerLinkActive="active" aria-current="page" >Proyectos</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['portafolio/contact']" routerLinkActive="active" aria-current="page" >Contacto</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" [routerLink]="['portafolio/blog']" routerLinkActive="active" aria-current="page" >Blog</a>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

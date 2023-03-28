@@ -3,7 +3,9 @@ import { CommonModule } from '@angular/common';
 import { MasterComponent } from './master/master.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { MasterComponent as MasterPortafolioComponent } from './portafolio/master/master.component';
+import { PortafolioMasterComponent } from './portafolio-master/portafolio-master.component';
+import { PortafolioFooterComponent } from './portafolio-footer/portafolio-footer.component';
+import { PortafolioHeaderComponent } from './portafolio-header/portafolio-header.component';
 
 
 /**
@@ -15,7 +17,9 @@ import { MasterComponent as MasterPortafolioComponent } from './portafolio/maste
     MasterComponent,
     HeaderComponent,
     FooterComponent,
-    MasterPortafolioComponent,
+    PortafolioMasterComponent,
+    PortafolioFooterComponent,
+    PortafolioHeaderComponent,
   ],
   imports: [
     CommonModule

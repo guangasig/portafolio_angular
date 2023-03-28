@@ -1,0 +1,7 @@
+.navbar-color{
+    background-color: #0f172a !important;
+}
+.navbar-items{
+    display: block !important;
+    flex-flow: row wrap !important;
+}

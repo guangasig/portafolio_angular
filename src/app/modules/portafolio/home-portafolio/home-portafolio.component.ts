@@ -20,7 +20,7 @@ export class HomePortafolioComponent implements OnInit {
     public titleModal:string = 'Modal';
     public contentModal:string = 'Description';
     public title = 'angularTests';
-    public list = ['me gusta el desarrollo de aplicaciones web', 'y enseñar progrmación.']
+    public list = ['El desarrollo de aplicaciones web', 'La docencia, y capacitarme constantemente']
 
     ngAfterViewInit() {
       let x = this.canvas;

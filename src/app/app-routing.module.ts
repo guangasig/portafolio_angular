@@ -1,17 +1,23 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomePortafolioComponent } from '@modules/portafolio/home-portafolio/home-portafolio.component';
+import { PortafolioMasterComponent } from '@layout/portafolio-master/portafolio-master.component';
 import { MasterComponent } from './layout/master/master.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: 'portafolio',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    component: HomePortafolioComponent,
+    path: 'page',
+    component: PortafolioMasterComponent,
+    children: [
+      {
+        path: 'portafolio',
+        loadChildren: () => import('@modules/portafolio/portafolio.module').then((m) => m.PortafolioModule),
+      }
+    ]
   },
   {
     path: 'panel',
