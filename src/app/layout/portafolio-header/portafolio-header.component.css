@@ -1,7 +1,118 @@
+
 .navbar-color{
     background-color: #0f172a !important;
 }
 .navbar-items{
     display: block !important;
     flex-flow: row wrap !important;
+}
+.navbar-sm{
+    display: none;
+    color: #fff;
+}
+@media (max-width: 360px) {
+    .navbar-items{
+        display: none !important;
+        flex-flow: row wrap !important;
+    }
+    .navbar-sm{
+        display: block;
+        width: 250px; 
+        height: 250px; 
+        border: 2px solid #fff; 
+        background: #e5e9e5;
+        -moz-border-radius: 0 100% 0 0;
+        -webkit-border-radius: 0 100% 0 0;
+        border-radius: 0 100% 0 0;
+        transform: rotate(180deg);
+        float: right;
+        color: #e5e9e5;
+    }
+    .navbar-items-sm{
+        position: absolute;
+    }
+    .portafolio{
+        position: relative;
+        left: 145px;
+        top: 15px;
+    }
+    .skills{
+        position: relative;
+        left: 150px;
+        top: 20px;
+    }
+    .projects{
+        position: relative;
+        left: 170px;
+        top: 25px;
+    }
+    .contact{
+        position: relative;
+        left: 200px;
+        top: 30px;
+    }
+    .blog{
+        position: relative;
+        left: 250px;
+        top: 35px;
+    }
+    .projects>a, .contact>a{
+        letter-spacing: 1.5px;
+    }
+    .portafolio>a, .blog>a{
+        letter-spacing: 5.5px;
+    }
+    .items-computer{
+        position: absolute;
+        top: 0px !important;
+        z-index: 1;
+        background: transparent;
+        width: 100%;
+        left: 0;
+        /* padding: 1px 10px 1px 10px; */
+    }
+    .nav-link{
+        color: #212646;
+    }
+    .text-logo{
+        color: #fff;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+        color: #1a0c94;
+    }
+
+    .logout-sm{
+        display: block;
+    }
+    .logout{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .items-computer{
+        position: absolute;
+        top: 56px;
+        z-index: 1;
+        background: transparent;
+        width: 100%;
+        left: 0px;
+        /* padding: 1px 10px 1px 10px; */
+    }
+    .nav-link{
+        color: #212646;
+    }
+    .text-logo{
+        color: #fff;
+    }
+    .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
+        color: #1a0c94;
+    }
+
+    .logout-sm{
+        display: block;
+    }
+    .logout{
+        display: none;
+    }
 }

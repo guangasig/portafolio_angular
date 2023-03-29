@@ -1,12 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
 body {
     color: #94a9c9;
-    background-color: #0f172a;
+    /* background-color: #0f172a; */
     font-family: Noto Sans,sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-style: normal;
     font-weight: 400;
+}
+* {
+  box-sizing: border-box;
+  z-index: 1;
 }
 h1, h2 {
     font-family: Noto Sans,sans-serif;
@@ -15,7 +19,7 @@ h1, h2 {
 .cover-home1:after, .cover-home1:before {
     width: 500px;
     content: "";
-    z-index: 1;
+    z-index: 0;
     position: absolute;
 }
 .cover-home1:after {

@@ -9,6 +9,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { MasterComponent } from './layout/master/master.component';
 import { HeaderComponent } from './layout/header/header.component';
@@ -36,6 +37,7 @@ import { PortafolioFooterComponent  } from './layout/portafolio-footer/portafoli
     SharedModule,
     BrowserModule,
     AppRoutingModule,
+    FontAwesomeModule,
   ],
   providers: [
     {

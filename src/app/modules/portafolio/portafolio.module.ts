@@ -10,6 +10,7 @@ import { PortafolioSkillsComponent } from './portafolio-skills/portafolio-skills
 import { PortafolioProjectsComponent } from './portafolio-projects/portafolio-projects.component';
 import { PortafolioContactComponent } from './portafolio-contact/portafolio-contact.component';
 import { PortafolioBlogComponent } from './portafolio-blog/portafolio-blog.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { PortafolioBlogComponent } from './portafolio-blog/portafolio-blog.compo
     PortafolioRoutingModule,
     AngularTypewriterEffectModule,
     TagCanvasModule,
+    FontAwesomeModule,
   ]
 })
 

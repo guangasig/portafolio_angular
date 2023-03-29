@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./portafolio-header.component.css']
 })
 export class PortafolioHeaderComponent {
-  collapsed:boolean=true
+
+  display='navbar-items';
+
+  togle(){
+    this.display = this.display == 'navbar-items' ? '' : 'navbar-items';
+    console.log(this.display);
+  }
+
 }

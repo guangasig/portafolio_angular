@@ -4,6 +4,7 @@ import { SkillsService } from '@data/services/api/skills/skills.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Tag } from 'ng-tagcanvas';
 import { Modal } from '@shared/components/modal/modal-bootstrap/modal-bootstrap';
+import { faLink, faUser } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-home-portafolio',
@@ -16,11 +17,14 @@ export class HomePortafolioComponent implements OnInit {
     @ViewChild("modal") modal!: ElementRef;
     @ViewChild("skills") canvas!: ElementRef;
 
+    faLink = faLink;
+    faUser = faUser;
+
     private modalM;
     public titleModal:string = 'Modal';
     public contentModal:string = 'Description';
     public title = 'angularTests';
-    public list = ['El desarrollo de aplicaciones web', 'La docencia, y capacitarme constantemente']
+    public list = ['El desarrollo de aplicaciones web', 'Y la docencia']
 
     ngAfterViewInit() {
       let x = this.canvas;
@@ -92,6 +96,9 @@ export class HomePortafolioComponent implements OnInit {
       this.modalM = new Modal(this.modalService);
     }
 
+    open(){
+      this.modalM.open(this.modal)
+    }
     
     tagClicked(tag:any) {
       console.log(tag);
