@@ -1,0 +1,74 @@
+.container-left{
+    /* background: #0bd1d1; */
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.links{
+    text-align: left;
+    display: flex;
+
+    justify-content: left;
+}
+.message{
+    width: 100%;
+    height: 110px;
+    text-align: left;
+    /* background: #0bd1d1; */
+}
+
+.message>.title-message{
+    color: #132143;
+    text-align: left;
+}
+
+.message>.subtitle-message>.ng-type-writer{
+    background: linear-gradient(90deg,#2dc84d,#77ce70 51%,#2dc84d) var(--x,0)/200%;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-clip: text!important;
+    text-fill-color: transparent;
+}
+
+.skill{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    /* background: red; */
+}
+.canvas{
+    position: absolute;
+    top: 0%;
+    left: 10%;
+}
+
+.canvas>tag-canvas{
+    box-sizing: content-box;
+    /* background-color: aqua; */
+    width: 500px !important;
+    height: 500px !important;
+}
+
+@media (max-width: 360px) {
+    .canvas>tag-canvas{
+        box-sizing: content-box;
+        /* background-color: aqua; */
+        width: 200px !important;
+        height: 200px !important;
+    }
+}
+@media (max-width: 768px) {
+    .canvas>tag-canvas{
+        box-sizing: content-box;
+        /* background-color: aqua; */
+        width: 250px !important;
+        height: 250px !important;
+    }
+}
+
+.message{
+
+}
