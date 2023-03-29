@@ -10,27 +10,47 @@
     display: none;
     color: #fff;
 }
+
 @media (max-width: 360px) {
+    /* Ocultar los items del navbar cuando estamos en un ancho de 360px*/
     .navbar-items{
         display: none !important;
         flex-flow: row wrap !important;
     }
+    /* Estilos para el boton de cerrar los items del navbar*/
+    .navbar-sm>svg{
+        float: right;
+    }
+    .navbar-sm>svg:hover{
+        animation: rotation 2s 1 linear;
+    }
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(180deg);
+        }
+    }
+    /* Estilos para el contenido de los items del navbar (figurar redondeada en la parte derecha superior)*/
     .navbar-sm{
         display: block;
         width: 250px; 
         height: 250px; 
         border: 2px solid #fff; 
-        background: #e5e9e5;
-        -moz-border-radius: 0 100% 0 0;
-        -webkit-border-radius: 0 100% 0 0;
-        border-radius: 0 100% 0 0;
-        transform: rotate(180deg);
+        background-color: #e5e9e5;
+        clip-path: circle(100% at top right);
         float: right;
-        color: #e5e9e5;
+    }
+    .navbar-sm:active{
+        background-color: #1a0c94;
+        transition-property: background-color;
+        transition-duration: 3s;
     }
     .navbar-items-sm{
         position: absolute;
     }
+    
     .portafolio{
         position: relative;
         left: 145px;

@@ -1,0 +1,35 @@
+.container-left{
+    /* background: #0bd1d1; */
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.links{
+    text-align: left;
+    display: flex;
+
+    justify-content: left;
+}
+.message{
+    width: 100%;
+    height: 110px;
+    text-align: left;
+    /* background: #0bd1d1; */
+}
+
+.message>.title-message{
+    color: #132143;
+    text-align: left;
+}
+
+.message>.subtitle-message>.ng-type-writer{
+    background: linear-gradient(90deg,#2dc84d,#77ce70 51%,#2dc84d) var(--x,0)/200%;
+    -webkit-background-clip: text!important;
+    -webkit-text-fill-color: transparent!important;
+    background-clip: text!important;
+    text-fill-color: transparent;
+    font-size: 30px;
+}

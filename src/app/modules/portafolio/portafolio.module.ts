@@ -11,6 +11,7 @@ import { PortafolioProjectsComponent } from './portafolio-projects/portafolio-pr
 import { PortafolioContactComponent } from './portafolio-contact/portafolio-contact.component';
 import { PortafolioBlogComponent } from './portafolio-blog/portafolio-blog.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PortafolioHomeComponent } from './portafolio-home/portafolio-home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PortafolioSkillsComponent,
     PortafolioProjectsComponent,
     PortafolioContactComponent,
-    PortafolioBlogComponent
+    PortafolioBlogComponent,
+    PortafolioHomeComponent
   ],
   imports: [
     FormsModule,

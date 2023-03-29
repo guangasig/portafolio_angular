@@ -2,12 +2,16 @@
 body {
     color: #94a9c9;
     /* background-color: #0f172a; */
-    font-family: Noto Sans,sans-serif;
+    font-family: 'Noto Sans',sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-style: normal;
     font-weight: 400;
 }
+.Bold700{
+    font-family: 'Noto Sans', sans-serif;
+}
+
 * {
   box-sizing: border-box;
   z-index: 1;

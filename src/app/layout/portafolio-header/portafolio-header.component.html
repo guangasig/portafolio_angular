@@ -9,7 +9,15 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="items-computer ml-2" [class]="display" id="navbarContent">
-            <div class="navbar-sm">Figura</div>
+            <div class="navbar-sm">
+                <svg xmlns="http://www.w3.org/2000/svg" 
+                    fill="none" viewBox="0 0 24 24" 
+                    strokeWidth={1.5} 
+                    stroke="currentColor"
+                    class="text-primary w-25" (click)="togle()">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </div>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-items-sm">
                 <li class="nav-item portafolio">
                     <a class="nav-link" [routerLink]="['portafolio']" routerLinkActive="active" aria-current="page">Inicio</a>

@@ -18,6 +18,7 @@ import { FooterComponent } from './layout/footer/footer.component';
 import { PortafolioMasterComponent  } from './layout/portafolio-master/portafolio-master.component';
 import { PortafolioHeaderComponent  } from './layout/portafolio-header/portafolio-header.component';
 import { PortafolioFooterComponent  } from './layout/portafolio-footer/portafolio-footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { PortafolioFooterComponent  } from './layout/portafolio-footer/portafoli
     CoreModule,
     SharedModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     FontAwesomeModule,
   ],

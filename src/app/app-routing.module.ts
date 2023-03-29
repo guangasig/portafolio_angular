@@ -6,7 +6,7 @@ import { MasterComponent } from './layout/master/master.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'portafolio',
+    redirectTo: 'page/portafolio',
     pathMatch: 'full'
   },
   {

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ChildrenOutletContexts } from '@angular/router';
 
 @Component({
   selector: 'app-portafolio-master',
@@ -6,5 +7,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./portafolio-master.component.css']
 })
 export class PortafolioMasterComponent {
+
+  constructor(private contexts: ChildrenOutletContexts) {}
+
+  getRouteAnimationData() {
+    return this.contexts.getContext('primary')?.route?.snapshot?.data?.['animation'];
+  }
 
 }
