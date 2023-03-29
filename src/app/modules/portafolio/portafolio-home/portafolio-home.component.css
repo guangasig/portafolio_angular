@@ -23,6 +23,8 @@
 .message>.title-message{
     color: #132143;
     text-align: left;
+    font-weight: 900;
+    font-size: 50px;
 }
 
 .message>.subtitle-message>.ng-type-writer{
@@ -32,4 +34,105 @@
     background-clip: text!important;
     text-fill-color: transparent;
     font-size: 30px;
+    font-weight: 300;
+}
+
+.banner-img{
+    z-index: 1;
+    width: 100%;
+    height: calc(100vh - 90px);
+}
+.banner-img .figure-1 {
+    position: absolute;
+    top: 33%;
+    left: 0;
+}
+.banner-img .figure-2 {
+    position: absolute;
+    top: 18%;
+    right: 15%;
+    animation: hero-thumb-animation 2s linear infinite alternate;
+}
+.banner-img .figure-3 {
+    position: absolute;
+    bottom: 4%;
+    left: 9%;
+    animation: hero-thumb-animation 2s linear infinite alternate;
+}
+.banner-img .figure-4 {
+    position: absolute;
+    bottom: 37%;
+    right: 4%;
+    animation: wiggle 2s linear infinite alternate;
+}
+
+.banner-img img {
+    z-index: 3;
+    position: relative;
+    display: block;
+    margin: auto;
+}
+
+.banner-img .figure-1 img {
+    animation: animationFramesOne 20s linear infinite alternate;
+}
+.banner-img .figure-2 img {
+    animation: rotateMe 10s linear infinite alternate;
+}
+
+@keyframes animationFramesOne {
+    0% {
+        transform:translate(0) rotate(0deg)
+    }
+    20% {
+        transform:translate(73px,-1px) rotate(36deg)
+    }
+    40% {
+        transform:translate(141px,72px) rotate(72deg)
+    }
+    60% {
+        transform:translate(83px,122px) rotate(108deg)
+    }
+    80% {
+        transform:translate(-40px,72px) rotate(144deg)
+    }
+    to {
+        transform:translate(0) rotate(0deg)
+    }
+}
+@keyframes rotateMe {
+    0% {
+        transform:rotate(0deg)
+    }
+    to {
+        transform:rotate(1turn)
+    }
+    }
+    @keyframes moveScale {
+    0% {
+        transform:scale(1)
+    }
+    50% {
+        transform:scale(.8)
+    }
+    to {
+        transform:scale(1)
+    }
+}
+@keyframes wiggle {
+    0%,
+    to {
+        transform:scale(1.2) rotate(7deg)
+    }
+    50% {
+        transform:scale(.8) rotate(-7deg)
+    }
+}
+@keyframes hero-thumb-animation {
+    0% {
+        transform:translateY(-20px)
+    }
+    to {
+        transform:translateY(0)
+    }
 }
