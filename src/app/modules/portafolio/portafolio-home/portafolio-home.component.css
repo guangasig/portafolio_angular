@@ -15,16 +15,22 @@
 }
 .message{
     width: 100%;
-    height: 110px;
+    height: 250px;
     text-align: left;
-    /* background: #0bd1d1; */
+    color: #0f0f0f;
 }
 
-.message>.title-message{
+.message p{
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.message .title-message{
     color: #132143;
     text-align: left;
     font-weight: 900;
-    font-size: 50px;
+    font-family: 'Inter';
+    font-size: clamp(40px, 8vw, 70px);
 }
 
 .message>.subtitle-message>.ng-type-writer{
@@ -135,4 +141,51 @@
     to {
         transform:translateY(0)
     }
+}
+
+
+.hOvuuP {
+  width: 40px;
+  position: fixed;
+  bottom: 0px;
+  left: 50px;
+  right: auto;
+  z-index: 10;
+  color: blacks;
+}
+
+.dVLQAC {
+  display: flex;
+  flex-direction: column;
+  -moz-box-align: center;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+}
+.dVLQAC li{
+    height: 50px;
+    width: 50px;
+    border-style: solid;
+    border-radius: 50%;
+}
+.dVLQAC li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.dVLQAC li a svg{
+    width: 26px;
+}
+
+.dVLQAC::after {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 150px;
+  margin: 0px auto;
+  background-color: black;
 }

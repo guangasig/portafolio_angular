@@ -14,7 +14,6 @@ body {
 
 * {
   box-sizing: border-box;
-  z-index: 1;
 }
 h1, h2 {
     font-family: Noto Sans,sans-serif;
@@ -31,4 +30,5 @@ h1, h2 {
     background: url(/assets/images/shadowleft.svg) no-repeat 100% 0;
     left: 0;
     top: 0;
+    z-index: -1;
 }

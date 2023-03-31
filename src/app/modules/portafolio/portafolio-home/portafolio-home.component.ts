@@ -1,7 +1,8 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { faDownload } from '@fortawesome/free-solid-svg-icons';
+import { faDownload, faL } from '@fortawesome/free-solid-svg-icons';
 import { slideInAnimation } from '@layout/animations';
 import {trigger,state,style,animate,transition, query, group, animateChild}from '@angular/animations';
+import { portafolioHeaderService } from '@layout/portafolio-header/portafolio-header.service';
 
 
 @Component({
@@ -23,6 +24,7 @@ import {trigger,state,style,animate,transition, query, group, animateChild}from 
     ])
   ]
 })
+
 export class PortafolioHomeComponent {
 
     @ViewChild("skills") canvas!: ElementRef;
@@ -33,5 +35,12 @@ export class PortafolioHomeComponent {
     public list = ['Soy desarrollo de aplicaciones web']
 
     faDownload = faDownload;
+    oyente = false;
 
+    constructor(
+      private sideBarService: portafolioHeaderService
+    ) { 
+      this.oyente = this.sideBarService.isOpen;
+      console.log('portafolio',this.oyente);
+    }
 }
