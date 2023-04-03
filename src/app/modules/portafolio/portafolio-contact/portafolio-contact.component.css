@@ -1,0 +1,54 @@
+.from-contact{
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.from-contact .from-group{
+    position: relative;
+}
+.from-contact .from-group .label{
+    position: absolute;
+    left: 20px;
+    top: -18px;
+    display: inline-block;
+    padding: 0px 0.5rem;
+    color: inherit;
+    border-bottom: 1.5px solid #f9f4f4;
+}
+
+.from-contact .from-group .form-control::placeholder {
+    color: #d4d2d2;
+}
+
+/*Iconos*/
+.container-icons{
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.container-icons .icon{
+    display: flex;
+    flex-direction: row
+}
+.container-icons .icon .fa-icon{
+    padding-top: 20px;
+    position: relative;
+}
+.container-icons .icon .fa-icon::after{
+    position: absolute;
+    top: 20%;
+    left: 65%;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 50px;
+    margin: 0px auto;
+    background-color: rgb(103, 103, 103);
+}
+.container-icons .icon .icon-text{
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

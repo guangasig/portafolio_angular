@@ -1,1 +1,53 @@
-<p>portafolio-contact works amnuel!</p> 
+<div class="container-fluit">
+    <div class="container row py-4 contact">
+        <div class="col-md-6 container-icons">
+            <div class="icon">
+                <div class="fa-icon pe-3">
+                    <fa-icon [icon]="faPhone"></fa-icon>
+                </div>
+                <div class="icon-text">
+                    <span>Teléfono:</span>
+                    <span>09958999</span>
+                </div>
+            </div>
+            <div class="icon">
+                <div class="fa-icon pe-3">
+                    <fa-icon [icon]="faEnvelope"></fa-icon>
+                </div>
+                <div class="icon-text">
+                    <span>Email:</span>
+                    <span>guangasig@informacion.com</span>
+                </div>
+            </div>
+            <div class="icon">
+                <div class="fa-icon pe-3">
+                    <fa-icon [icon]="faMapLocationDot"></fa-icon>
+                </div>
+                <div class="icon-text">
+                    <span>Ubicación:</span>
+                    <span>Ecuador - Tungurahua - Ambato</span>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <form class="from-contact">
+                <div class="from-group mb-4">
+                    <label class="label" for="asunto">Asunto</label>
+                    <input type="text" class="form-control" name="asunto" value="" placeholder="Ingresar el asunto"/>
+                </div>
+                <div class="from-group mb-4">
+                    <label class="label" for="email">Email</label>
+                    <input type="email" class="form-control" name="email" value="" placeholder="Ingresar su email"/>
+                </div>
+                <div class="from-group mb-4">
+                    <label class="label" for="descripcion">Descripción</label>
+                    <textarea class="form-control" name="descripcion" rows="2" cols="1" placeholder="Describir el asunto"></textarea>
+                </div>
+                <div class="from-group mb-4">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+</div>

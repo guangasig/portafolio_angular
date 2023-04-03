@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faPhone, faEnvelope, faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-portafolio-contact',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./portafolio-contact.component.css']
 })
 export class PortafolioContactComponent {
+  
+  public faPhone= faPhone;
+  public faEnvelope= faEnvelope;
+  public faMapLocationDot= faMapLocationDot;
 
 }
