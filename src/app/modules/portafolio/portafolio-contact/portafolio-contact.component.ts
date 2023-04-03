@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { faPhone, faEnvelope, faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { TimelineLite, TimelineMax, Back, Power1, gsap } from 'gsap'
+import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-portafolio-contact',
