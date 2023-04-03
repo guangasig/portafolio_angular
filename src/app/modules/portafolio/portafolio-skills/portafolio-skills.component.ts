@@ -43,6 +43,8 @@ export class PortafolioSkillsComponent implements OnInit{
     this.skillsService.getSkills().subscribe(response =>{
       if(!response.error){
         this.tags = response.data ? response.data : [];
+        this.tags.sort(function() { return Math.random() - 0.5 });
+        console.log(this.tags);
       }else{
         this.tags = [];
       }

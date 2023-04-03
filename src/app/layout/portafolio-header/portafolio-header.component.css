@@ -1,8 +1,39 @@
-@media (min-width: 1200px){
-    .container-navbar {
-        max-width: 1315px;
-    }
+.navigation{
+    position: fixed;
+    width: 10%; /*Manual xp no se esta heredando directamente del padre*/
+    height: 100vh;
+    background-color: #0a192f;
+    overflow: hidden;
+    transition: all 0.4s ease-in-out 0s;
 }
+.container-nav{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    flex-direction: column;
+    border-right: 2px solid var(--border-color);
+}
+.container-nav .nav-logo{
+    width: 100%;
+    height: 200px;
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1rem 0px;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+}
+.container-nav .nav-items{
+    width: 100%;
+    height: 100vh;
+}
+
 
 
 .navbar-color{
@@ -18,6 +49,22 @@
 }
 
 @media (max-width: 360px) {
+    .navigation{
+        width: 100%;
+    }
+    .container-nav{
+        background: #0a192f !important;
+    }
+    .container-nav .nav-logo{
+        /* background-color: #1a0c94; */
+        flex-direction: row;
+        width: 100%;
+        height: 50px;
+    }
+    .container-nav .nav-logo .btn-sm{
+        color: #f1f2f5 !important;
+        font-size: 20px;
+    }
     /* Ocultar los items del navbar cuando estamos en un ancho de 360px*/
     .navbar-items{
         display: none !important;
@@ -38,6 +85,13 @@
             transform: rotate(180deg);
         }
     }
+
+     .navbar-portafolio{
+        position: absolute;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+    
     /* Estilos para el contenido de los items del navbar (figurar redondeada en la parte derecha superior)*/
     .navbar-sm{
         display: block;

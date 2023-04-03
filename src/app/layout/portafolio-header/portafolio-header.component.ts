@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { portafolioHeaderService } from './portafolio-header.service';
 
+
 @Component({
   selector: 'app-portafolio-header',
   templateUrl: './portafolio-header.component.html',

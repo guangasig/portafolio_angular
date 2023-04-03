@@ -4,12 +4,13 @@
 
 .container-title{
     padding-top: 50px;
+    padding-bottom: 20px;
 }
 .container-title .title{
     display: flex;
     align-items: center;
     position: relative;
-    margin: 10px 0px 40px;
+    margin: 10px 0px 5px;
     width: 100%;
     font-size: clamp(26px,5vw,10px);
     white-space: nowrap;
