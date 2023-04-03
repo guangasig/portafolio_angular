@@ -38,7 +38,6 @@
     -webkit-background-clip: text!important;
     -webkit-text-fill-color: transparent!important;
     background-clip: text!important;
-    text-fill-color: transparent;
     font-size: 30px;
     font-weight: 300;
 }
@@ -157,7 +156,6 @@
 .dVLQAC {
   display: flex;
   flex-direction: column;
-  -moz-box-align: center;
   align-items: center;
   margin: 0px;
   padding: 0px;
