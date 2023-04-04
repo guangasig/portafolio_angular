@@ -10,7 +10,6 @@
 .links{
     text-align: left;
     display: flex;
-
     justify-content: left;
 }
 .message{
@@ -143,6 +142,25 @@
     }
 }
 
+
+@media (max-width: 576px) {
+    .container-home{
+        padding-top: 100px;
+    }
+    .container-left, .banner-img{
+        height: 300px;
+    }
+    .message p{
+        font-size: 13px !important;
+        line-height: 30px;
+    }
+    .message .title-message{
+        font-size: clamp(20px, 8vw, 30px) !important;
+    }
+    .message>.subtitle-message>.ng-type-writer{
+        font-size: clamp(15px, 8vw, 20px) !important;
+    }
+}
 
 .hOvuuP {
   width: 40px;

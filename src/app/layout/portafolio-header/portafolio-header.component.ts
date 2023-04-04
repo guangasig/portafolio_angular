@@ -7,6 +7,7 @@ import { portafolioHeaderService } from './portafolio-header.service';
   templateUrl: './portafolio-header.component.html',
   styleUrls: ['./portafolio-header.component.css']
 })
+
 export class PortafolioHeaderComponent {
 
   display='navbar-items';
