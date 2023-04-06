@@ -1,33 +1,16 @@
-<div class="container-fluit container-page">
+<div class="container container-page">
+    <app-title-portafolio 
+        title="Contacto"
+        description="Si piensas que mi perfil responde a tus necesidades o necesitadas ayuda en algún tipo de proyecto, te dejo los medios en los que puede contactarte conmigo."
+    />
     <div class="container row py-4 contact">
         <div class="col-md-6 container-icons">
-            <div class="icon">
-                <div class="fa-icon pe-3">
-                    <fa-icon [icon]="faPhone"></fa-icon>
-                </div>
-                <div class="icon-text" #box1>
-                    <span>Teléfono:</span>
-                    <span>09958999</span>
-                </div>
-            </div>
-            <div class="icon">
-                <div class="fa-icon pe-3">
-                    <fa-icon [icon]="faEnvelope"></fa-icon>
-                </div>
-                <div class="icon-text">
-                    <span>Email:</span>
-                    <span>guangasig@informacion.com</span>
-                </div>
-            </div>
-            <div class="icon">
-                <div class="fa-icon pe-3">
-                    <fa-icon [icon]="faMapLocationDot"></fa-icon>
-                </div>
-                <div class="icon-text">
-                    <span>Ubicación:</span>
-                    <span>Ecuador - Tungurahua - Ambato</span>
-                </div>
-            </div>
+            <app-socials-media 
+                *ngFor="let item of links" 
+                [icono]="item.icon"
+                [text]="item.text"
+                [description]="item.description"
+            />
         </div>
         <div class="col-md-6">
             <form class="from-contact">
@@ -47,7 +30,6 @@
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </div>
             </form>
-            
         </div>
     </div>
 </div>

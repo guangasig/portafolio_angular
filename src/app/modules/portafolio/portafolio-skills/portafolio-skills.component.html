@@ -1,17 +1,10 @@
-<div class="container container-page">
-    <div class="container-title row">
-        <div class="col-md-6 col-sm-12">
-            <h1 class="title">
-                Habilidades
-            </h1>
-            <p>
-                Los proyectos en los que participado me han permitido fortalecer los conocimientos adquiridos con esfuerzo y dedicación.
-            </p>
-        </div>
-    </div>
-</div>
 
-<div class="container text-center">
+<div class="container container-page">
+    <app-title-portafolio 
+        title="Habilidades"
+        description="Las habilidades obtenidas son fruto de trabajo, dedicación, y pasión por el mundo del desarrollo de aplicaciones."
+    >
+    </app-title-portafolio>
     <div class="row">
         <div class="col-md-6 col-sm-12">
             <div class="container-left flex-column">
@@ -33,7 +26,7 @@
         <div class="col-md-6 col-sm-12">
             <div class="skill">
                 <div class="canvas">
-                    <!-- <tag-canvas #skills [tags]="tags" [options]="options" (tagClick)="tagClicked($event)"></tag-canvas> -->
+                    <tag-canvas #skills [tags]="tags" [options]="options" (tagClick)="tagClicked($event)"></tag-canvas>
                 </div>
             </div>
         </div>
@@ -42,6 +35,7 @@
         </div>
     </div>
 </div>
+
 <!-- <app-modal-bootstrap></app-modal-bootstrap> -->
 <ng-template #modal let-modal>
 	<div class="modal-header">

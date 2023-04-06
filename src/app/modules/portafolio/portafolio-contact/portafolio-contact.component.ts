@@ -1,6 +1,5 @@
 import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
 import { faPhone, faEnvelope, faMapLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { gsap } from 'gsap';
 
 @Component({
   selector: 'app-portafolio-contact',
@@ -9,17 +8,23 @@ import { gsap } from 'gsap';
 })
 export class PortafolioContactComponent implements AfterViewInit {
   
-  public faPhone= faPhone;
-  public faEnvelope= faEnvelope;
-  public faMapLocationDot= faMapLocationDot;
+  public faPhone = faPhone;
+  public faEnvelope = faEnvelope;
+  public faMapLocationDot = faMapLocationDot;
 
-  @ViewChild('box1') box: ElementRef;
+  public links = [
+    {icon:faPhone, text:"Teléfono", description:"0995819939"},
+    {icon:faEnvelope, text:"Email", description:"informacion@manuelguangasig.com"},
+    {icon:faMapLocationDot, text:"Ubicación", description:"Ecuador - Tungurahua - Ambato"}
+  ] 
+
+  // @ViewChild('box1') box: ElementRef;
 
   ngAfterViewInit(){
-    gsap.fromTo(this.box.nativeElement, 
-      {duration:2, ease: "power2.out", x: -100}, 
-      {duration:2, ease: "power2.out", x: 0}
-    );
+  //   gsap.fromTo(this.box.nativeElement, 
+  //     {duration:2, ease: "power2.out", x: -100}, 
+  //     {duration:2, ease: "power2.out", x: 0}
+  //   );
   }
 
 }

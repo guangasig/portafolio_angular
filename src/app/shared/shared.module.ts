@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import * as fromComponents from './components';
 import { RouterModule } from '@angular/router';
 import { ModalBootstrapComponent } from './components/modal/modal-bootstrap/modal-bootstrap.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ModalBootstrapComponent } from './components/modal/modal-bootstrap/moda
     ReactiveFormsModule,
     HttpClientModule,
     RouterModule,
+    FontAwesomeModule,
   ],
   exports: [
     CommonModule,
