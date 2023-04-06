@@ -44,155 +44,15 @@
     color: #fff;
 }
 
-
-@media (max-width: 768px) {
-    .navigation{
-        width: 100%;
-        height: 250px;
-        display: block !important;
-        background-color: transparent !important;
-    }
-    .container-nav{
-        height: 80px;
-        display: flex;
-        flex-direction:column !important;
-        position: relative;
-        background-color: #fdfcfc;
-    }
-    .container-nav .nav-logo{
-        width: 100%;
-        height: inherit;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .container-nav .nav-logo .container-logo{
-        width: 80%;
-        display: flex;
-        color: #f1f2f5;
-        padding-top: 2px;
-        padding-bottom: 5px;
-        /* background-color: #2dc84d; */
-    }
-    .container-nav .nav-logo .container-togle{
-        width: 20% !important;
-        color: #f1f2f5;
-        padding-top: 2px;
-        padding-bottom: 5px;
-        /* background-color: blue;; */
-    }
-    .container-nav .nav-logo .container-togle .btn-brands{
-        color: #132143 !important;
-        font-size: 30px;
-    }
-    .container-nav .nav-logo .container-togle .btn-brands svg{
-        width: 40% !important;
-        color: #132143 !important;
-    }
-
-
-    /* Ocultar los items del navbar cuando estamos en un ancho de 360px*/
-    .navbar-items{
-        display: none !important;
-        flex-flow: row wrap !important;
-        z-index: 2;
-    }
-
-    /* Estilos para el boton de cerrar los items del navbar*/
-    .navbar-sm>svg{
-        float: right;
-        color: #0a192f;
-    }
-    .navbar-sm>svg:hover{
-        animation: rotation 2s 1 linear;
-    }
-    @keyframes rotation {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(180deg);
-        }
-    }
-
-    .navbar-portafolio{
-        position: absolute;
-        display: flex !important;
-        flex-direction: column !important;
-    }
-    
-    /* Estilos para el contenido de los items del navbar (figurar redondeada en la parte derecha superior)*/
-    .navbar-sm{
-        display: block;
-        width: 250px; 
-        height: 250px; 
-        border: 2px solid #fff; 
-        background-color: #e5e9e5;
-        clip-path: circle(100% at top right);
-        float: right;
-    }
-    .navbar-sm:active{
-        background-color: #132143;
-        transition-property: background-color;
-        transition-duration: 3s;
-    }
-    .navbar-items-sm{
-        position: absolute;
-    }
-    
-    .portafolio{
-        position: relative;
-        left: 550px;
-        top: 15px;
-    }
-    .skills{
-        position: relative;
-        left: 560px;
-        top: 20px;
-    }
-    .projects{
-        position: relative;
-        left: 570px;
-        top: 25px;
-    }
-    .contact{
-        position: relative;
-        left: 600px;
-        top: 30px;
-    }
-    .blog{
-        position: relative;
-        left: 650px;
-        top: 35px;
-    }
-    .projects>a, .contact>a{
-        letter-spacing: 1.5px;
-    }
-    .portafolio>a, .blog>a{
-        letter-spacing: 5.5px;
-    }
-    .items-computer{
-        position: absolute;
-        top: 0px !important;
-        z-index: 1;
-        background: transparent;
-        width: 100%;
-        left: 0;
-        /* padding: 1px 10px 1px 10px; */
-    }
-    .nav-link{
-        color: #132143;
-    }
-    .text-logo{
-        color: #fff;
-    }
-    .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
-        color: #2dc84d;
-        font-weight: 300;
-    }
+.btn-togle{
+    display: none;
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
+
+    .btn-togle{
+        display: block;
+    }
     .navigation{
         width: 100%;
         height: 250px;
@@ -225,13 +85,15 @@
         color: #f1f2f5;
         padding-top: 2px;
         padding-bottom: 5px;
+        display: flex;
+        justify-content: flex-end;
     }
     .container-nav .nav-logo .container-togle .btn-brands{
         color: #132143 !important;
         font-size: 30px;
     }
     .container-nav .nav-logo .container-togle .btn-brands svg{
-        width: 100% !important;
+        width: 55px !important;
         color: #132143 !important;
     }
 
@@ -246,9 +108,11 @@
         float: right;
         color: #0a192f;
     }
+
     .navbar-sm>svg:hover{
         animation: rotation 2s 1 linear;
     }
+
     @keyframes rotation {
         from {
             transform: rotate(0deg);
@@ -267,13 +131,21 @@
     /* Estilos para el contenido de los items del navbar (figurar redondeada en la parte derecha superior)*/
     .navbar-sm{
         display: block;
-        width: 250px; 
-        height: 250px; 
-        border: 2px solid #fff; 
-        background-color: #e5e9e5;
-        clip-path: circle(100% at top right);
+        width: 250px;
+        height: 250px;
+        border: 2px solid #65cd6845; 
+        background-color: #2ca82f;
+        clip-path: circle(50% at top right);
+        animation-name: animation1;
+        animation-duration: 1.5s;
         float: right;
     }
+
+    @keyframes animation1 {
+        from {clip-path: circle(20% at top right);}
+        to {clip-path: circle(50% at top right)}
+    }
+
     .navbar-sm:active{
         background-color: #132143;
         transition-property: background-color;
@@ -281,35 +153,51 @@
     }
     .navbar-items-sm{
         position: absolute;
+        /* background-color: #2dc84c21; */
+        background-color: #132143;
+        width: 250px;
+        height: 250px; 
+        clip-path: circle(100% at top right);
+        animation-name: animation2;
+        animation-duration: 2s;
+        right: 0px;
+        padding-top: 0;
+        z-index: -1;
+    }
+    
+    @keyframes animation2 {
+        from {clip-path: circle(60% at top right);}
+        to {clip-path: circle(100% at top right)}
     }
     
     .portafolio{
         position: relative;
-        left: calc(100% + 230px);
+        left: 30px;
         top: 15px;
     }
     .skills{
         position: relative;
-        left: calc(100% + 240px);
+        left: 40px;
         top: 20px;
+
     }
     .projects{
         position: relative;
-        left: calc(100% + 250px);
+        left: 70px;
         top: 25px;
     }
     .contact{
         position: relative;
-        left: calc(100% + 275px);
+        left: 110px;
         top: 30px;
     }
     .blog{
         position: relative;
-        left: calc(100% + 320px);
+        left: 160px;
         top: 35px;
     }
     .projects>a, .contact>a{
-        letter-spacing: 1.5px;
+        letter-spacing: 1px;
     }
     .portafolio>a, .blog>a{
         letter-spacing: 5.5px;
@@ -324,7 +212,7 @@
         /* padding: 1px 10px 1px 10px; */
     }
     .nav-link{
-        color: #132143;
+        color: #d8d9db;
     }
     .text-logo{
         color: #fff;

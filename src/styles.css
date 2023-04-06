@@ -34,8 +34,22 @@ h1, h2 {
 }
 .cover-home1:after {
     height: 100%;
+    width: 50%;
     background: url(/assets/images/shadowleft.svg) no-repeat 100% 0;
     left: 0;
     top: 0;
     z-index: -1;
+}
+
+@media (max-width: 576px){
+    .cover-home1:after {
+        height: 100%;
+        /* width: 50%; */
+    }
+}
+
+@media (max-width: 576px){
+    .container-page {
+        padding-top: 100px;
+    }
 }

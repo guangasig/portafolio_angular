@@ -4,10 +4,18 @@
 .container-left{
     background-color: transparent;
     width: 10%;
-    height: calc(100vh -50px);
+    height: calc(100vh - 50px);
 }
 
 .container-rigtht{
     background-color: transparent;
     width: 90%;
+}
+
+@media (max-width: 576px){
+    .container-left{
+        background-color: transparent;
+        width: 1%;
+        height: calc(100vh - 50px);
+    }
 }

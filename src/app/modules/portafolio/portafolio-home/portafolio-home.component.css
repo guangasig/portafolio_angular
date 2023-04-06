@@ -49,6 +49,7 @@
     /* background-image: url('https://ingenio.kushki.com/static/habi-f566daac37deebd4c22d7aed43ddba66.svg'); */
     background-image: url('assets/images/home.png');
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 .banner-img img {
@@ -58,7 +59,15 @@
     margin: auto;
     width: 40%;
 }
-
+@media (max-width: 360px) {
+    .banner-img img {
+    z-index: 3;
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 25%;
+}
+}
 .banner-img .figure-1 {
     position: absolute;
     top: 33%;
@@ -89,6 +98,8 @@
 .banner-img .figure-2 img {
     animation: rotateMe 10s linear infinite alternate;
 }
+
+
 
 @keyframes animationFramesOne {
     0% {
