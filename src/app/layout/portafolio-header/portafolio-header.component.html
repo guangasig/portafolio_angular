@@ -6,6 +6,10 @@
                 <a class="text-logo" [routerLink]="['portafolio']" aria-current="page">
                     <img src="assets/images/logo.png" alt="">
                 </a>
+                <div class="description-logo">
+                    <p class="name">Guangasig</p>
+                    <p class="activity">Web Developer</p>
+                </div>
             </div>
             <div class="container-togle">
                 <button class="btn btn-brands btn-togle" type="button" aria-controls="navbarContent" aria-label="Toggle navigation" (click)="togle()">
@@ -17,7 +21,7 @@
         </div> 
         <div class="nav-items">
             <nav class="navbar-color">
-                <div class="container container-navbar">
+                <div class="container-navbar">
                     <div class="items-computer ml-2" [class]="display" id="navbarContent">
                         <div class="navbar-sm">
                             <svg xmlns="http://www.w3.org/2000/svg" 
@@ -30,23 +34,38 @@
                         </div>
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 navbar-portafolio navbar-items-sm">
                             <li class="nav-item portafolio">
-                                <a class="nav-link" [routerLink]="['portafolio']" routerLinkActive="active" aria-current="page">Inicio</a>
+                                <a class="nav-link" [routerLink]="['portafolio']" routerLinkActive="active" aria-current="page">
+                                    <fa-icon [icon]="faHome"></fa-icon>
+                                    Inicio
+                                </a>
                             </li>
 
                             <li class="nav-item skills">
-                                <a class="nav-link" [routerLink]="['portafolio/skills']" routerLinkActive="active" aria-current="page" >Habilidades</a>
+                                <a class="nav-link" [routerLink]="['portafolio/skills']" routerLinkActive="active" aria-current="page" >
+                                    <fa-icon [icon]="faListOl"></fa-icon>
+                                    Habilidades
+                                </a>
                             </li>
 
                             <li class="nav-item projects">
-                                <a class="nav-link" [routerLink]="['portafolio/projects']" routerLinkActive="active" aria-current="page" >Proyectos</a>
+                                <a class="nav-link" [routerLink]="['portafolio/projects']" routerLinkActive="active" aria-current="page" >
+                                    <fa-icon [icon]="faTableCells"></fa-icon>
+                                    Proyectos
+                                </a>
                             </li>
 
                             <li class="nav-item contact">
-                                <a class="nav-link" [routerLink]="['portafolio/contact']" routerLinkActive="active" aria-current="page" >Contacto</a>
+                                <a class="nav-link" [routerLink]="['portafolio/contact']" routerLinkActive="active" aria-current="page" >
+                                    <fa-icon [icon]="faEnvelope"></fa-icon>
+                                    Contacto
+                                </a>
                             </li>
 
                             <li class="nav-item blog">
-                                <a class="nav-link" [routerLink]="['portafolio/blog']" routerLinkActive="active" aria-current="page" >Weblog</a>
+                                <a class="nav-link" [routerLink]="['portafolio/blog']" routerLinkActive="active" aria-current="page" >
+                                    <fa-icon [icon]="faBlog"></fa-icon>
+                                    Weblog
+                                </a>
                             </li>
 
                         </ul>

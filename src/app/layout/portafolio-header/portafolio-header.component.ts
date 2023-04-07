@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { portafolioHeaderService } from './portafolio-header.service';
-
+import { faHome, faListOl, faTableCells, faEnvelope, faBlog } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-portafolio-header',
@@ -11,6 +11,11 @@ import { portafolioHeaderService } from './portafolio-header.service';
 export class PortafolioHeaderComponent {
 
   display='navbar-items';
+  public faHome = faHome;
+  public faListOl = faListOl;
+  public faTableCells = faTableCells;
+  public faEnvelope = faEnvelope;
+  public faBlog = faBlog;
 
   constructor(
     private sideBarService: portafolioHeaderService
