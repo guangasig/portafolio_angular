@@ -56,6 +56,22 @@ h1, h2 {
     border: 1px solid #0f172a;
 }
 
+/* Modal */
+.modal-header, .modal-footer {
+  padding: 5px 20px;
+  color: #0f172a;
+}
+.modal-header .modal-title{
+  font-size: 17px;
+}
+.btn-close:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .25rem rgb(251, 251, 252);
+  opacity: 1;
+  height: 4px;
+  width: 4px;
+}
+
 @media (max-width: 576px){
     .cover-home1:after {
         height: 100%;

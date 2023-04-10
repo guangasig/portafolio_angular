@@ -4,6 +4,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Tag } from 'ng-tagcanvas';
 import { Modal } from '@shared/components/modal/modal-bootstrap/modal-bootstrap';
 import { faLink, faUser } from '@fortawesome/free-solid-svg-icons';
+import { SKILLS_DATA } from '@data/constants/skills.constants';
 
 @Component({
   selector: 'app-portafolio-skills',
@@ -46,7 +47,7 @@ export class PortafolioSkillsComponent implements OnInit{
         this.tags.sort(function() { return Math.random() - 0.5 });
         console.log(this.tags);
       }else{
-        this.tags = [];
+        this.tags = SKILLS_DATA;
       }
     })
 
@@ -59,8 +60,7 @@ export class PortafolioSkillsComponent implements OnInit{
     this.contentModal = tag ? tag.descripcion : '';
     this.modalM.open(this.modal)
   }
-
-
+  
   ngOnInit(): void {
 
   }

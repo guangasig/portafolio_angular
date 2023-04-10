@@ -1,8 +1,7 @@
-.container-left{
+.container-skills{
     /* background: #0bd1d1; */
     z-index: 1;
-    width: 100%;
-    /* height: calc(100vh - 200px); */
+    height: calc(100vh - 250px);
 }
 .links{
     text-align: left;
@@ -10,11 +9,14 @@
     flex-direction: column;
     justify-content: left;
     width: 100%;
+    padding-top: 10px;
 }
 
 .skill{
     position: relative;
     width: 100%;
+    color: #0f172a;
+
 }
 .canvas{
     position: absolute;
@@ -25,23 +27,32 @@
 .canvas>tag-canvas{
     box-sizing: content-box;
     /* background-color: aqua; */
-    width: 450px !important;
-    height: 450px !important;
+    width: 400px !important;
+    height: 400px !important;
+}
+
+
+@media (max-width: 768px) {
+    .canvas{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+    }
+    .canvas>tag-canvas{
+        box-sizing: content-box;
+        /* background-color: aqua; */
+        width: 250px !important;
+        height: inherit !important;
+        
+    }
 }
 
 @media (max-width: 360px) {
     .canvas>tag-canvas{
         box-sizing: content-box;
         /* background-color: aqua; */
-        width: 200px !important;
-        height: 200px !important;
-    }
-}
-@media (max-width: 768px) {
-    .canvas>tag-canvas{
-        box-sizing: content-box;
-        /* background-color: aqua; */
-        width: 250px !important;
-        height: 250px !important;
+        width: 300px !important;
+        height: inherit !important;
+        margin: 10px 0px;
     }
 }
