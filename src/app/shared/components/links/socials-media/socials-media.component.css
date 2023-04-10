@@ -13,6 +13,7 @@
 .icon .fa-icon{
     padding-top: 20px;
     position: relative;
+    color: #132143;
 }
 .icon .fa-icon::after{
     position: absolute;
@@ -30,4 +31,5 @@
     flex-direction: column;
     padding-top: 10px;
     padding-bottom: 10px;
+    color: #132143;
 }

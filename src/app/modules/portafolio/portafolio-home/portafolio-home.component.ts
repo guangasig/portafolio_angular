@@ -12,13 +12,13 @@ import { gsap } from 'gsap';
   animations: [
     trigger('enterState', [
       state('*',style({
-        opacity:0.7,
-        background: '#c6c6c6'
+        opacity:0.9,
+        // background: '#c6c6c6'
       })),
       transition(':enter',[
         animate('900ms ease-out', style({
-          opacity:0.5,
-          background: '#c7c7c1'
+          opacity:0.8,
+          // background: '#c7c7c1'
         }))
       ]),
     ])

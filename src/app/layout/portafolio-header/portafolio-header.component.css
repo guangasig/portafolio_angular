@@ -2,7 +2,7 @@
     position: fixed;
     width: 10%; /*Manual xp no se esta heredando directamente del padre*/
     height: 100vh;
-    background-color: #0a192f;
+    background-color: #0f172a;
     overflow: hidden;
     transition: all 0.4s ease-in-out 0s;
     z-index: 2;
@@ -16,12 +16,12 @@
     -webkit-box-pack: justify;
     justify-content: space-between;
     flex-direction: column;
-    border-right: 2px solid var(--border-color);
+    /* border-right: 2px solid var(--border-color); */
 }
 .container-nav .nav-logo{
     width: 100%;
     height: 300px;
-    border-bottom: 1px solid var(--border-color);
+    /* border-bottom: 1px solid var(--border-color); */
     text-align: center;
     padding: 1rem 0px;
     display: flex;
@@ -125,6 +125,16 @@
         color: #132143 !important;
     }
 
+    .nav-item .nav-link{
+        padding-top: 9px;
+        padding-bottom: 9px;
+        padding-left: 10px;
+        padding-right: 10px;
+        display: flex;
+        flex-wrap: nowrap;
+        border-top: 1px solid #94a9c9;
+    }
+
     /* Ocultar los items del navbar cuando estamos en un ancho de 360px*/
     .navbar-items{
         display: none !important;
@@ -134,7 +144,7 @@
     /* Estilos para el boton de cerrar los items del navbar*/
     .navbar-sm>svg{
         float: right;
-        color: #0a192f;
+        color: #0f172a;
     }
 
     .navbar-sm>svg:hover{
@@ -216,19 +226,16 @@
     }
     .contact{
         position: relative;
-        left: 110px;
+        left: 100px;
         top: 30px;
     }
     .blog{
         position: relative;
-        left: 160px;
+        left: 150px;
         top: 35px;
     }
-    .projects>a, .contact>a{
+    .projects>a, .contact>a, .blog>a{
         letter-spacing: 1px;
-    }
-    .portafolio>a, .blog>a{
-        letter-spacing: 5.5px;
     }
     .items-computer{
         position: absolute;
@@ -245,8 +252,18 @@
     .text-logo{
         color: #fff;
     }
-    .navbar-nav .nav-link.active, .navbar-nav .show > .nav-link {
-        color: #2dc84d;
-        font-weight: 300;
-    }
 }
+
+.nav-link:hover fa-icon {
+    color: #1fba65 !important;
+}
+.nav-link.active fa-icon {
+    color: #1fba65 !important;
+    font-weight: 300;
+}
+
+.nav-link.active {
+    color: #dfe1e0 !important;
+    font-weight: 300;
+}
+

@@ -33,7 +33,7 @@
 }
 
 .message>.subtitle-message>.ng-type-writer{
-    background: linear-gradient(90deg,#2dc84d,#77ce70 51%,#2dc84d) var(--x,0)/200%;
+    background: linear-gradient(90deg,#4db987,#51d706 60%,#4dba87) var(--x,0)/250%;
     -webkit-background-clip: text!important;
     -webkit-text-fill-color: transparent!important;
     background-clip: text!important;

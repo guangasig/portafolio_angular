@@ -1,6 +1,6 @@
 import { Component, ElementRef, NgZone, OnInit, ViewChild, HostListener, AfterViewInit } from '@angular/core';
 import { ChildrenOutletContexts } from '@angular/router';
-import { gsap, TweenMax, Power1 } from 'gsap';
+import { TweenMax } from 'gsap';
 
 @Component({
   selector: 'app-portafolio-master',

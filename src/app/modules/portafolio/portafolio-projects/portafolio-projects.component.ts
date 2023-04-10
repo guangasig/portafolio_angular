@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { faListCheck} from '@fortawesome/free-solid-svg-icons';
+import { faListCheck, faEyeLowVision, faLink } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-portafolio-projects',
@@ -11,5 +11,7 @@ export class PortafolioProjectsComponent  {
   public message: string = "Hola Mundo!"
 
   public faFileArchive = faListCheck;
+  public faEyeLowVision = faEyeLowVision;
+  public faLink = faLink;
 
 }

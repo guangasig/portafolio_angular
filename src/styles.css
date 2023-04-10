@@ -1,18 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-    color: #94a9c9;
+    color: #dfe1e0;
     /* background-color: #0f172a; */
     font-family: 'Noto Sans',sans-serif;
     font-size: 14px;
     line-height: 18px;
     font-style: normal;
     font-weight: 400;
-    background-color: #fdfcfc;
+    background-color: #e8e8e8;
 }
 
-.btn-portabolio{
-    color: #fdfcfc;
-    background-color: linear-gradient(45deg,#0a192f,#0a192f 51%,#838c84) var(--x,0)/100%;
+.btn-portafolio{
+    background: #0ea5ea;
+    background: linear-gradient(90deg,#4db987,#51d706 51%,#4dba87) var(--x,0)/200%;
+    color: #fff;
+    border: 0px solid #0bd1d1;
+    transition: .5s;
+}
+
+.btn-portafolio:hover{
+    background: #0ea5ea;
+    background: linear-gradient(90deg,#4db987,#51d706 -51%,#4dba87) var(--x,0)/200%;
+    color: #fff;
+    border: 0px solid #0bd1d1;
+    transition: .5s;
 }
 
 .Bold700{
@@ -35,10 +46,14 @@ h1, h2 {
 .cover-home1:after {
     height: 100%;
     width: 50%;
-    background: url(/assets/images/shadowleft.svg) no-repeat 100% 0;
+    /* background: url(/assets/images/shadowleft.svg) no-repeat 100% 0; */
     left: 0;
     top: 0;
     z-index: -1;
+}
+
+.form-control {
+    border: 1px solid #0f172a;
 }
 
 @media (max-width: 576px){

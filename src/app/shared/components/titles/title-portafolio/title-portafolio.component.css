@@ -2,6 +2,11 @@
 .container-title{
     padding-top: 50px;
     padding-bottom: 20px;
+    color: #132143 !important;
+}
+
+.title, .description{
+    color: #132143;
 }
 
 .container-title .title{
@@ -23,5 +28,5 @@
     width: 300px;
     height: 1px;
     margin-left: 20px;
-    background-color: black;
+    background-color: #132143;
 }
