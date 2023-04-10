@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { faListCheck, faEyeLowVision, faLink } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-card-project',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-project.component.css']
 })
 export class CardProjectComponent {
+
+  public faFileArchive = faListCheck;
+  public faEyeLowVision = faEyeLowVision;
+  public faLink = faLink;
+  public programas = [];
+
+  @Input() name = 'Name';
+  @Input() date = 'Date description';
+  // @Input() programas = '';
 
 }

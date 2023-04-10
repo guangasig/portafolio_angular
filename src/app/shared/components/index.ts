@@ -5,6 +5,7 @@ import { ModalBootstrapComponent } from './modal/modal-bootstrap/modal-bootstrap
 import { TitlePortafolioComponent } from './titles/title-portafolio/title-portafolio.component';
 import { SocialsLinksComponent } from './links/socials-links/socials-links.component';
 import { SocialsMediaComponent } from './links/socials-media/socials-media.component';
+import { CardProjectComponent } from './cards/card-project/card-project.component';
 
 
 export const components:any[] = [
@@ -14,5 +15,6 @@ export const components:any[] = [
     SocialsLinksComponent,
     SocialsMediaComponent,
     CardUserComponent,
+    CardProjectComponent,
     ModalBootstrapComponent,
 ];

@@ -1,1 +1,35 @@
-<p>card-project works!</p>
+
+
+    <div class="card-project">
+        <div class="card-container card-header">
+            <img src="assets/images/projects/project-coop.png" class="icon-projet" alt="">
+            <div class="view">
+                <fa-icon [icon]="faEyeLowVision"></fa-icon>
+            </div>
+        </div>
+        <div class="card-container card-body">
+            <div class="card-description">
+                <h1 class="title">
+                    {{ name }}
+                </h1> 
+                <p>
+                    {{ date  }}
+                </p>
+                <h1 class="title">Herrameintas utilizadas</h1>
+                <ul *ngIf="programas.length>0">
+                    <li *ngFor="let item of programas">
+                        <!-- <small>{{ item.nombre }}</small> -->
+                    </li>
+                </ul>                      
+            </div>
+            <div class="links">
+                <div class="zoom">
+                    <fa-icon [icon]="faEyeLowVision"></fa-icon>
+                </div>
+                <div class="zoom">
+                    <fa-icon [icon]="faLink"></fa-icon>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- </div> -->

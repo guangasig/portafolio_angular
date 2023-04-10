@@ -6,37 +6,35 @@
     <div class="container-project">
         <div class="card-group">
             <div class="container-card row">
-                
-                <div class="card-project col-sm-12 col-md-4">
+
+                <!-- <app-card-project 
+                    *ngFor="let project of projects"
+                    [name]="project.nombre"
+                    [date]="project.fecha"
+                    programas="project.programas"
+                    class="col-sm-12 col-md-4 card-project"
+                /> -->
+             
+                <div class="card-project col-sm-12 col-md-4" *ngFor="let project of projects">
                     <div class="card-container card-header">
-                        <img src="assets/images/projects/project-coop.png" class="icon-projet" alt="">
+                        <img [src]="project.imagen" class="icon-projet" alt="">
                         <div class="view">
                             <fa-icon [icon]="faEyeLowVision"></fa-icon>
                         </div>
                     </div>
                     <div class="card-container card-body">
                         <div class="card-description">
-                            <h1 class="title">
-                                Proyecto 1
-                            </h1> 
-                            <p>
-                                Noviwembre 2018 Abril 2019
-                            </p>
+                            <h1 class="title"> {{ project.nombre }}</h1>
+                            <p>{{ project.fecha }}</p>
                             <h1 class="title">Herrameintas utilizadas</h1>
-                            <ul>
-                                <li>
-                                    <small>.Net</small>
+                            <ul *ngIf="project.programas">
+                                <li *ngFor="let programa of project.programas">
+                                    <small>{{ programa.nombre }}</small>
                                 </li>
-                                <li>
-                                    <small>SqlServer</small>
-                                </li>
-                                <li>
-                                    <small>Aspose Pdf .Microsoft Excel </small>
-                                </li>
-                            </ul>                      
+                            </ul>
                         </div>
                         <div class="links">
-                            <div class="zoom">
+                            <div class="zoom" (click)="openModalProject(project.id)">
                                 <fa-icon [icon]="faEyeLowVision"></fa-icon>
                             </div>
                             <div class="zoom">
@@ -46,90 +44,19 @@
                     </div>
                 </div>
 
-                <div class="card-project col-sm-12 col-md-4">
-                    <div class="card-container card-header">
-                        <img src="assets/images/projects/project-istlama.png" class="icon-projet" alt="">
-                    </div>
-                    <div class="card-container card-body">
-                        <div class="card-description">
-                            <h1 class="title">
-                                Proyecto 2
-                            </h1>
-                            <p>
-                                Ocubre 2019 Abril 2020
-                            </p>
-                            <h1 class="title">Herrameintas utilizadas</h1>
-                            <ul>
-                                <li>
-                                    <small>Laraval</small>
-                                </li>
-                                <li>
-                                    <small>Mysql</small>
-                                </li>
-                                <li>
-                                    <small>JQuery</small>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-project col-sm-12 col-md-4">
-                    <div class="card-container card-header">
-                        <img src="assets/images/projects/protect-portafolio.png" class="icon-projet" alt="">
-                    </div>
-                    <div class="card-container card-body">
-                        <div class="card-description">
-                            <h1 class="title">
-                                Proyecto 3
-                            </h1>
-                            <p>
-                                Febrero 2022 
-                            </p>
-                            <h1 class="title">Herrameintas utilizadas</h1>
-                            <ul>
-                                <li>
-                                    <small>CodeIgniter</small>
-                                </li>
-                                <li>
-                                    <small>React</small>
-                                </li>
-                                <li>
-                                    <small>Mysql</small>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-project col-sm-12 col-md-4">
-                    <div class="card-container card-header">
-                        <img src="assets/images/projects/protect-portafolio.png" class="icon-projet" alt="">
-                    </div>
-                    <div class="card-container card-body">
-                        <div class="card-description">
-                            <h1 class="title">
-                                Proyecto 4
-                            </h1>
-                            <p>
-                                Junio 2022 
-                            </p>
-                            <h1 class="title">Herrameintas utilizadas</h1>
-                            <ul>
-                                <li>
-                                    <small>React</small>
-                                </li>
-                                <li>
-                                    <small>Tailwind CSS</small>
-                                </li>
-                            </ul>
-
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
 </div>
+<ng-template #modal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title">{{ project.nombre }}</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')"></button>
+	</div>
+	<div class="modal-body">
+		<img [src]="project.imagen" class="img-fluid" alt="project.nombre">
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-light btn-sm" (click)="modal.close('Close click')">Close</button>
+	</div>
+</ng-template>
