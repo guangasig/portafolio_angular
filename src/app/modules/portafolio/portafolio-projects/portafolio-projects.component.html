@@ -1,7 +1,7 @@
 <div class="container container-page">
     <app-title-portafolio 
         title="Proyectos"
-        description="Los trabajos personales, y trabajos en los que participo con profesionales de diferentes áreas me permiten evolucionar como desarrollador de web y como persona."
+        description="Los trabajos personales, y trabajos en los que participo con profesionales de diferentes áreas me permiten evolucionar como desarrollador de apliaciones y como persona."
     />
     <div class="container-project">
         <div class="card-group">
@@ -26,7 +26,7 @@
                         <div class="card-description">
                             <h1 class="title"> {{ project.nombre }}</h1>
                             <p>{{ project.fecha }}</p>
-                            <h1 class="title">Herrameintas utilizadas</h1>
+                            <h1 class="title">Herramientas utilizadas</h1>
                             <ul *ngIf="project.programas">
                                 <li *ngFor="let programa of project.programas">
                                     <small>{{ programa.nombre }}</small>

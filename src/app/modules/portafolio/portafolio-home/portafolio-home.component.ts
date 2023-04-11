@@ -34,7 +34,7 @@ export class PortafolioHomeComponent implements AfterViewInit{
     public titleModal:string = 'Modal';
     public contentModal:string = 'Description';
     public title = 'angularTests';
-    public list = ['¡Gracias por visitar mi portafolio!','Soy desarrollo de aplicaciones web']
+    public list = ['¡Gracias por visitar mi portafolio!','Soy desarrollador de aplicaciones web']
 
     faDownload = faDownload;
     oyente = false;

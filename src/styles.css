@@ -1,3 +1,12 @@
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('assets/fonts/Noto_Sans/NotoSans-Regular.ttf');
+}
+@font-face {
+    font-family: 'Inter';
+    src: url('assets/fonts/Inter/static/Inter-Bold.ttf');
+}
 /* You can add global styles to this file, and also import other style files */
 body {
     color: #dfe1e0;
