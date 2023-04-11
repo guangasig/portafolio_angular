@@ -1,3 +1,4 @@
+
 .container-left{
     /* background: #0bd1d1; */
     z-index: 1;
@@ -60,13 +61,16 @@
     width: 40%;
 }
 @media (max-width: 360px) {
+    .message{
+        padding-top: 15px;
+    }
     .banner-img img {
-    z-index: 3;
-    position: relative;
-    display: block;
-    margin: auto;
-    width: 25%;
-}
+        z-index: 3;
+        position: relative;
+        display: block;
+        margin: auto;
+        width: 28%;
+    }
 }
 .banner-img .figure-1 {
     position: absolute;
@@ -96,7 +100,7 @@
     animation: animationFramesOne 20s linear infinite alternate;
 }
 .banner-img .figure-2 img {
-    animation: rotateMe 10s linear infinite alternate;
+    /* animation: rotateMe 10s linear infinite alternate; */
 }
 
 
@@ -123,7 +127,7 @@
 }
 @keyframes rotateMe {
     0% {
-        transform:rotate(0deg)
+        transform:rotate(10deg)
     }
     to {
         transform:rotate(1turn)

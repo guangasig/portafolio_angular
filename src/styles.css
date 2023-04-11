@@ -84,3 +84,72 @@ h1, h2 {
         padding-top: 100px;
     }
 }
+
+
+/*Bacground*/
+
+.tags {
+    color: #d2d2d2;
+    position: absolute;
+    bottom: 0;
+    left: 9rem;
+    font-style: italic;
+    font-size: 25px;
+    font-family: 'La Belle Aurore',cursive;
+}
+
+.top-tags {
+    bottom: auto;
+    top: 1rem;
+}
+
+.top-tags:after {
+    content: '<body>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #d2d2d2;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 2rem;
+}
+
+.bottom-tags {
+    bottom: 4.5rem;
+    top: auto;
+}
+
+.bottom-tags:before {
+    content: '</body>';
+    font-family: 'La Belle Aurore',cursive;
+    color: #d2d2d2;
+    font-size: 25px;
+    position: absolute;
+    margin-left: 2rem;
+}
+
+@media (max-width: 768px) {
+    .tags {
+        bottom: 0;
+        left: 1rem;
+        font-size: 15px;
+    }
+
+    .top-tags {
+        bottom: auto;
+        top: 5rem;
+    }
+
+    .top-tags:after {
+        font-size: 15px;
+        margin-left: 1rem;
+    }
+
+    .bottom-tags {
+        position: fixed;
+        bottom: 0;
+    }
+
+    .bottom-tags:before {
+        font-size: 15px;
+        margin-left: 1rem;
+    }
+}
