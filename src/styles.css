@@ -131,6 +131,7 @@ h1, h2 {
         bottom: 0;
         left: 1rem;
         font-size: 15px;
+        color: #b0b0b1;
     }
 
     .top-tags {
@@ -141,15 +142,21 @@ h1, h2 {
     .top-tags:after {
         font-size: 15px;
         margin-left: 1rem;
+        color: #b0b0b1;
+
     }
 
     .bottom-tags {
         position: fixed;
         bottom: 0;
+        color: #b0b0b1;
+
     }
 
     .bottom-tags:before {
         font-size: 15px;
         margin-left: 1rem;
+        color: #b0b0b1;
+
     }
 }
