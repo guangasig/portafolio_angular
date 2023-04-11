@@ -76,6 +76,7 @@
     position: absolute;
     top: 33%;
     left: 0;
+    animation: wiggle 2s linear infinite alternate;
 }
 .banner-img .figure-2 {
     position: absolute;
@@ -97,7 +98,7 @@
 }
 
 .banner-img .figure-1 img {
-    animation: animationFramesOne 20s linear infinite alternate;
+    /* animation: animationFramesOne 20s linear infinite alternate; */
 }
 .banner-img .figure-2 img {
     /* animation: rotateMe 10s linear infinite alternate; */

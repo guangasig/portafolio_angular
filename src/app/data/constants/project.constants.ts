@@ -19,7 +19,7 @@ export const PROJECTS_DATA:IProject[] = [
       imagen: "assets/images/projects/project-istlama.png",
       programas:[
         { nombre:"Laravel" },
-        { nombre:"Mysql" },
+        { nombre:"MySql" },
         { nombre:"JQuery" }
       ]
     },
@@ -31,7 +31,7 @@ export const PROJECTS_DATA:IProject[] = [
       programas:[
         { nombre:"CodeIgniter" },
         { nombre:"React" },
-        { nombre:"Mysql" }
+        { nombre:"MySql" }
       ]
     },
 
@@ -41,9 +41,20 @@ export const PROJECTS_DATA:IProject[] = [
       fecha: "Junio 2022",
       imagen: "assets/images/projects/project-carlitos.png",
       programas:[
-        { nombre:"Junio 2022" },
         { nombre:"React" },
         { nombre:"Tailwind CSS" }
+      ]
+    },
+
+    { 
+      id:4,
+      nombre: "Proyecto 5", 
+      fecha: "Enero 2023",
+      imagen: "assets/images/projects/controelectoral.png",
+      programas:[
+        { nombre:"Vue.js" },
+        { nombre:"MySql" },
+        { nombre:"Laravel" }
       ]
     },
 
