@@ -3,5 +3,6 @@ export interface IProject {
     nombre:string;
     fecha:string;
     imagen:string;
+    view:boolean;
     programas:Array<{nombre:string}>;
 }
